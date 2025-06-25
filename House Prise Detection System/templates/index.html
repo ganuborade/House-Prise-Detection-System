@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>House Price Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>House Price Predictor By CSE 3rd year 🏠</h1>
+    <form id="predict-form">
+      <input type="number" name="LotArea" placeholder="Lot Area (sq ft)" required>
+      <input type="number" name="1stFlrSF" placeholder="1st Floor Area (sq ft)" required>
+      <input type="number" name="2ndFlrSF" placeholder="2nd Floor Area (sq ft)" required>
+      <input type="number" name="GarageArea" placeholder="Garage Area (sq ft)" required>
+      <input type="number" name="YearBuilt" placeholder="Year Built (e.g., 2005)" required>
+      <input type="number" name="TotRmsAbvGrd" placeholder="Total Rooms Above Ground" required>
+      <input type="number" name="GarageCars" placeholder="Number of Garage Cars" required>
+      <input type="number" name="OverallQual" placeholder="Overall Quality (1-10)" required>
+      <input type="number" name="OverallCond" placeholder="Overall Condition (1-10)" required>
+      <button type="submit"> Click To Predict Price</button>
+    </form>
+    <div id="result"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </div>
+</body>
+</html>
